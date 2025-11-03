@@ -1,0 +1,21 @@
+{
+  "name": "nokos-bot-100-platform-fixed",
+  "version": "2.0.0",
+  "description": "Free SMS Bot - 100 Platforms 250 Countries - FIXED EDITION",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["sms", "telegram-bot", "free-sms", "nokos"],
+  "author": "@Jeeyhosting",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0",
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
