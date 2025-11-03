@@ -2,6 +2,9 @@ module.exports = {
     BOT_TOKEN: '8374179615:AAH_nIQYYaYLCHqT-P-nI9PDqq9QmFD8F6E',
     OWNER_ID: '7804463533',
     
+    // GAMBAR BOT - Taruh URL gambar lu di sini
+    BOT_IMAGE: 'https://files.catbox.moe/d49amr.png', // GANTI INI DENGAN URL GAMBAR LU
+    
     CACHE_DURATION: 300000,
     TIMEOUT: 15000,
     MAX_RETRIES: 3,
@@ -9,6 +12,15 @@ module.exports = {
     
     COUNTRIES_PER_PAGE: 12,
     NUMBERS_PER_PAGE: 20,
+    
+    // Auto delete settings (untuk menu tertentu, bukan /start)
+    AUTO_DELETE_ENABLED: true,
+    AUTO_DELETE_DELAY: 300000, // 5 menit (dalam ms)
+    
+    // API Settings
+    API_ENABLED: true,
+    API_PORT: 3000,
+    API_KEY: 'nokos_api_key_' + Math.random().toString(36).substring(7),
     
     // 250 NEGARA LENGKAP!
     COUNTRIES: [
@@ -218,7 +230,7 @@ module.exports = {
         { code: 'vu', name: 'Vanuatu', flag: '🇻🇺', dialCode: '+678' }
     ],
     
-    // 100 PLATFORM SMS - SETIAP PLATFORM = 1 DEDICATED SERVER!
+    // 100 PLATFORM SMS
     PLATFORMS: [
         { id: 1, name: 'Receive-SMS-Free', url: 'https://receive-sms-free.cc', server: 'server-001.receive-sms.net', active: true },
         { id: 2, name: 'Receive-SMSS', url: 'https://receive-smss.com', server: 'server-002.receive-smss.io', active: true },
@@ -324,7 +336,6 @@ module.exports = {
     
     // ALL SOCIAL MEDIA DETECTION - 100+ PLATFORMS!
     SOCIAL_MEDIA: {
-        // Messaging Apps
         whatsapp: { 
             patterns: [/whatsapp/i, /wa\scode/i, /\d{3}-\d{3}/], 
             icon: '📱', 
@@ -367,8 +378,6 @@ module.exports = {
             name: 'Messenger',
             copyable: 'Messenger Code: {code}'
         },
-        
-        // Social Media
         instagram: { 
             patterns: [/instagram/i, /ig\scode/i], 
             icon: '📸', 
@@ -423,8 +432,6 @@ module.exports = {
             name: 'Tumblr',
             copyable: 'Tumblr Code: {code}'
         },
-        
-        // Gaming
         discord: { 
             patterns: [/discord/i, /discord\scode/i], 
             icon: '🎮', 
@@ -467,8 +474,6 @@ module.exports = {
             name: 'Xbox',
             copyable: 'Xbox Code: {code}'
         },
-        
-        // Email & Cloud
         google: { 
             patterns: [/google/i, /gmail/i, /G-\d{6}/], 
             icon: '🔍', 
@@ -499,8 +504,6 @@ module.exports = {
             name: 'Dropbox',
             copyable: 'Dropbox Code: {code}'
         },
-        
-        // E-commerce
         amazon: { 
             patterns: [/amazon/i, /aws/i], 
             icon: '📦', 
@@ -567,8 +570,6 @@ module.exports = {
             name: 'Taobao',
             copyable: 'Taobao Code: {code}'
         },
-        
-        // Transportation
         uber: { 
             patterns: [/uber/i, /uber\scode/i], 
             icon: '🚗', 
@@ -593,8 +594,6 @@ module.exports = {
             name: 'Lyft',
             copyable: 'Lyft Code: {code}'
         },
-        
-        // Crypto & Finance
         binance: { 
             patterns: [/binance/i], 
             icon: '💰', 
@@ -625,8 +624,6 @@ module.exports = {
             name: 'Revolut',
             copyable: 'Revolut Code: {code}'
         },
-        
-        // Entertainment
         netflix: { 
             patterns: [/netflix/i], 
             icon: '🎬', 
@@ -657,8 +654,6 @@ module.exports = {
             name: 'Disney+',
             copyable: 'Disney+ Code: {code}'
         },
-        
-        // Video Conferencing
         zoom: { 
             patterns: [/zoom/i], 
             icon: '📹', 
@@ -677,8 +672,6 @@ module.exports = {
             name: 'Microsoft Teams',
             copyable: 'Teams Code: {code}'
         },
-        
-        // Dating
         tinder: { 
             patterns: [/tinder/i], 
             icon: '❤️', 
@@ -697,8 +690,6 @@ module.exports = {
             name: 'Badoo',
             copyable: 'Badoo Code: {code}'
         },
-        
-        // Travel & Booking
         airbnb: { 
             patterns: [/airbnb/i], 
             icon: '🏠', 
@@ -711,8 +702,6 @@ module.exports = {
             name: 'Booking.com',
             copyable: 'Booking.com Code: {code}'
         },
-        
-        // Freelance & Work
         fiverr: { 
             patterns: [/fiverr/i], 
             icon: '💼', 
@@ -731,16 +720,12 @@ module.exports = {
             name: 'Freelancer',
             copyable: 'Freelancer Code: {code}'
         },
-        
-        // Russian Social Media
         vk: { 
             patterns: [/vk\.com/i, /vkontakte/i], 
             icon: '🔵', 
             name: 'VK',
             copyable: 'VK Code: {code}'
         },
-        
-        // Others
         github: {
             patterns: [/github/i],
             icon: '💻',
